@@ -63,12 +63,31 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: black-blue
+
+# Plugins
+Plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:DeepThoughtTech/deepthought.github.io.git
+  repo: git@github.com:DeepThoughtTech/blog.git
   branch: master
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+search:
+  path: search.json
+  field: post
+
+sitemap:
+  path: sitemap.xml
