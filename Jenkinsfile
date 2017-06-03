@@ -19,6 +19,6 @@ node('unix') {
           -v ${gitHome}/source:/Hexo/source \
           -v ${gitHome}/themes:/Hexo/themes \
           -v ${gitHome}:/root/hexo \
-          mikimoto/hexo  Mikimoto mikimoto.c@gmail.com"
+          mikimoto/hexo  Mikimoto mikimoto.c@gmail.com d"
   }
 }
