@@ -8,6 +8,12 @@ node('unix') {
   def gitHome = pwd()
 
   stage('Generate') {
+    try {
+      sh "docker rm hexo"
+    } catch(e) {
+
+    }
+    
     sh "docker run --name hexo -d \
           -v /var/lib/jenkins/.ssh:/root/.ssh \
           -v ${gitHome}/source:/Hexo/source \
