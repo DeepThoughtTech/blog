@@ -14,7 +14,7 @@ node('unix') {
 
     }
     
-    sh "docker run --name hexo -d \
+    sh "docker run --name hexo -it --rm \
           -v /var/lib/jenkins/.ssh:/root/.ssh \
           -v ${gitHome}/source:/Hexo/source \
           -v ${gitHome}/themes:/Hexo/themes \
